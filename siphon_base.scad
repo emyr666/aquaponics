@@ -59,13 +59,13 @@ module siphon_base(
 
 $fa=1;
 $fs=0.5;
-insert_tube_diameter=69.0;
-total_height=60;
+insert_tube_diameter=90.0;
+total_height=150;
 hole_section_height=32;
 hole_section_thickness=4;
-upper_section_thickness=3;
+upper_section_thickness=4;
 hole_vertical_offset=2;
-hole_width=27.5;
+hole_width=40;
 hole_height=25;
 hole_radius=5;
 drain_diameter=35;
@@ -73,6 +73,7 @@ outer_diameter=insert_tube_diameter+2*hole_section_thickness-2*upper_section_thi
 bulkhead_length=40;
 bulkhead_diameter=44;
 
+difference() {
 siphon_base(
   insert_tube_diameter,
   total_height,
@@ -84,3 +85,5 @@ siphon_base(
   hole_height,
   hole_radius
 );
+translate([0,0,-1]) cylinder(d=93,h=21);
+}

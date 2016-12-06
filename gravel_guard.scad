@@ -19,14 +19,14 @@ $fs=1;
 offset=3;
 union() {
   difference() {
-    tube(50,4,120);
+    tube(80,4,120);
     for (h = [-3:3:150]) {
         for (a = [0+h : 5 : 360+h] ) {
            rotate([0,0,a]) translate([0,0,offset+h]) pencil(3,200);
         }
     }
-    translate([0,0,-1]) tube(11,2,116);
-    translate([0,0,40]) tube(11,2,120);
+    translate([0,0,-1]) tube(11,3,116);
+    translate([0,0,70]) tube(11,3,121);
   }
 
 }
